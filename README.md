@@ -1,4 +1,4 @@
-react-hot-boilerplate
+react-starter
 =====================
 
 The minimal dev environment to enable live-editing React components.
@@ -10,9 +10,34 @@ npm install
 npm start
 open http://localhost:3000
 ```
+This will build the project and output a bundle into the build directory. The index file references this bundle
 
-Now edit `scripts/App.js`.  
-Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
+### Dev environment
+
+'''
+    npm run start-hot
+    open http://localhost:3001
+'''
+NOTE: It is assumed that the dependencies in package.json have already been installed via npm install.
+
+This will start the webpack-dev-server, with hot reloading. Open App.jsx in the src directory, add something to the render function and save.
+The changes will appear in the browser without requiring a refresh. This allows changes to be made to the application without changing state!
+
+If you define API routes or any other server routes outside of your React application, you will also want to run the Express server in conjunction with
+the webpack-dev-server in order to make these endpoints available. Run the following commands in a second terminal window.
+
+'''
+    npm install -g nodemon
+    npm run start-dev
+    open http://localhost:3000
+'''
+
+NOTE: I have setup the npm start-dev script to use nodemon in order to auto-reload the server whenever server-side files are changed. If you would
+      like to launch the server with regular NodeJS, then open package.json and change "nodemon" to "node" in the definition of the npm start-dev script.
+
+If you are running this setup, you no longer need to navigate to the webpack-dev-server directly through port 3001. All requests attempting to access
+build files have been setup to be proxied through the webpack-dev-server. Therefore, just navigate to localhost:3000, as normal.
+
 
 ### Linting
 
@@ -21,26 +46,3 @@ This boilerplate project includes React-friendly ESLint configuration.
 ```
 npm run lint
 ```
-
-### Using `0.0.0.0` as Host
-
-You may want to change the host in `server.js` and `webpack.config.js` from `localhost` to `0.0.0.0` to allow access from same WiFi network. This is not enabled by default because it is reported to cause problems on Windows. This may also be useful if you're using a VM.
-
-### Missing Features
-
-This boilerplate is purposefully simple to show the minimal configuration for React Hot Loader. For a real project, you'll want to add a separate config for production with hot reloading disabled and minification enabled. You'll also want to add a router, styles and maybe combine dev server with an existing server. This is out of scope of this boilerplate, but you may want to look into [other starter kits](https://github.com/gaearon/react-hot-loader/blob/master/docs/README.md#starter-kits).
-
-### Dependencies
-
-* React
-* Webpack
-* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-* [babel-loader](https://github.com/babel/babel-loader)
-* [react-hot-loader](https://github.com/gaearon/react-hot-loader)
-
-### Resources
-
-* [Demo video](http://vimeo.com/100010922)
-* [react-hot-loader on Github](https://github.com/gaearon/react-hot-loader)
-* [Integrating JSX live reload into your workflow](http://gaearon.github.io/react-hot-loader/getstarted/)
-* Ping dan_abramov on Twitter or #reactjs IRC

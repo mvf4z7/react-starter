@@ -38,9 +38,8 @@ export default class App extends Component {
   render() {
     return (
     	<div>
-			<h1>hot load!</h1>
-	    	<h1>Friangle</h1>
-			<button onClick={function(){console.log('hello world');}}>don't click me</button>
+	    	<h1>Triangle</h1>
+			<button onClick={function(){console.log('hello world');}}>Click me!</button>
 	      	<h3>Rotating at variable speeds</h3>
 	      	<h5>{ this.state.counter }</h5>
 	      	<Incrementor onAction={this.incrementCounter.bind(this)}/>
