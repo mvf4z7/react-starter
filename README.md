@@ -41,7 +41,7 @@ build files have been setup to be proxied through the webpack-dev-server. Theref
 
 ### Linting
 
-This boilerplate project includes React-friendly ESLint configuration.
+This starter-kit includes React-friendly ESLint configuration. Modify the rules in the .eslintrc file located on the root.
 
 ```
 npm run lint
