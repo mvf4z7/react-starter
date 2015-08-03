@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Incrementor from './Incrementor';
-import Decrementor from './Decrementor';
+import Incrementor from './incrementor';
+import Decrementor from './decrementor';
 
 export default class App extends Component {
 
@@ -38,9 +38,8 @@ export default class App extends Component {
   render() {
     return (
 		<div>
-			<h1>Triangle</h1>
-			<button onClick={function(){ console.log('hello world'); }}>Click me!</button>
-			<h3>Rotating at variable speeds</h3>
+			<h1>React Starter Kit!</h1>
+			<button onClick={function(){ console.log('hello world'); }}>I print to console</button>
 			<h5>{ this.state.counter }</h5>
 			<Incrementor onAction={this.incrementCounter.bind(this)}/>
 			<Decrementor counter={this.state.counter} onAction={this.decrementCounter.bind(this)}/>
