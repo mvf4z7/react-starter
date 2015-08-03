@@ -6,7 +6,7 @@ export default class App extends Component {
 
 	state = {
 		counter: 0,
-		my_name: 'Mike'
+		myName: 'Mike'
 	}
 
 	componentWillMount() {
@@ -25,26 +25,26 @@ export default class App extends Component {
 		console.log('Component did update');
 	}
 
-	incrementCounter(step) {
+	incrementCounter() {
 		this.state.counter++;
 		this.setState(this.state);
 	}
 
-	decrementCounter(ste) {
+	decrementCounter() {
 		this.state.counter--;
 		this.setState(this.state);
 	}
 
   render() {
     return (
-    	<div>
-	    	<h1>Triangle</h1>
-			<button onClick={function(){console.log('hello world');}}>Click me!</button>
-	      	<h3>Rotating at variable speeds</h3>
-	      	<h5>{ this.state.counter }</h5>
-	      	<Incrementor onAction={this.incrementCounter.bind(this)}/>
-	      	<Decrementor counter={this.state.counter} onAction={this.decrementCounter.bind(this)}/>
-      	</div>
+		<div>
+			<h1>Triangle</h1>
+			<button onClick={function(){ console.log('hello world'); }}>Click me!</button>
+			<h3>Rotating at variable speeds</h3>
+			<h5>{ this.state.counter }</h5>
+			<Incrementor onAction={this.incrementCounter.bind(this)}/>
+			<Decrementor counter={this.state.counter} onAction={this.decrementCounter.bind(this)}/>
+		</div>
     );
   }
 }

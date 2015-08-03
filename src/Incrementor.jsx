@@ -11,8 +11,4 @@ export default class Incrementor extends Component {
 			<button onClick={this.handleAction.bind(this)}>Increment</button>
 		);
 	}
-
-
-
-
 }
