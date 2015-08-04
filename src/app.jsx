@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Incrementor from './incrementor';
 import Decrementor from './decrementor';
 
-import './app.css';
 require('./app.scss');
 
 export default class App extends Component {
