@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Incrementor from './incrementor';
 import Decrementor from './decrementor';
 
+import './app.css';
+require('./app.scss');
+
 export default class App extends Component {
 
 	state = {
@@ -37,8 +40,8 @@ export default class App extends Component {
 
   render() {
     return (
-		<div>
-			<h1>React Starter Kit!</h1>
+		<div className='app-wrapper'>
+			<h1 className='app-sass-class'>React Starter Kit!</h1>
 			<button onClick={function(){ console.log('hello world'); }}>I print to console</button>
 			<h5>{ this.state.counter }</h5>
 			<Incrementor onAction={this.incrementCounter.bind(this)}/>
