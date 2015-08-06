@@ -6,7 +6,7 @@ var config = {
     entry: [
         'webpack-dev-server/client?http://localhost:3001',
         'webpack/hot/only-dev-server',
-        './src/index'
+        './src/main'
     ],
     output: {
         path: path.join(__dirname, 'build'),
