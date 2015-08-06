@@ -1,15 +1,22 @@
-body {
-    margin: 0;
+.app-wrapper {
+    background-color: tomato;
+    height: 100%;
 }
 
-.app-wrapper {
+.app-title {
+    font-size: 3em;
+    padding: 1rem;
+}
+
+.nav {
+    padding: 1em;
+}
+
+.nav-button {
+    font-size: 1.5em;
+    margin: 1em;
+}
+
+.nav-button-active {
     background-color: cyan;
-
-    h1 {
-        background-color: red;
-    }
-
-    h2 {
-        background-color: green;
-    }
 }

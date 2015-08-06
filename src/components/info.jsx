@@ -6,7 +6,7 @@ export default class Home extends React.Component {
     render() {
         return (
     	 	<div>
-    			<h1>Insert Home Page Content Here</h1>
+    			<h1>Insert Info Page Content Here</h1>
     		</div>
         );
     }
